@@ -1,0 +1,269 @@
+@import 'variables';
+
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust the gap between listings */
+    margin-bottom: 40px;
+    padding: 40px; /* Add padding to the entire container */
+
+    @include for-esm {
+        justify-content: center;
+    }
+
+    @include for-md {   
+        padding: 40px 70px;
+        &.two-items-on-row {
+            justify-content: space-between;
+        }
+        &.three-items-on-row {
+            justify-content: flex-start; 
+            gap: 30px calc(9%);
+        }
+    }
+
+    @include for-lg {
+        padding: 40px calc(13%);
+        &.one-item-on-row,
+        &.two-items-on-row {
+            gap: 40px 0; 
+            justify-content: space-between; 
+        }
+
+        &.three-items-on-row {
+            justify-content: flex-start;
+            gap: 40px calc(16.6%);
+        }
+    }
+
+    @include for-xl {
+        padding: 40px calc(10%);
+        &.one-item-on-row,
+        &.two-items-on-row {
+            gap: 40px 30px; 
+            justify-content: space-between; 
+        }
+
+        &.three-items-on-row {
+            justify-content: flex-start;
+            gap: 40px calc(20%);
+        }
+    }
+
+    @include for-2xl {
+        padding: 40px calc(5%);
+        &.one-item-on-row,
+        &.three-items-on-row,
+        &.two-items-on-row {
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        &.four-items-on-row {
+            gap: 20px; 
+            justify-content: space-between; 
+        }
+    }
+}
+
+.listing {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgb(247, 247, 247); /* Use a light background color */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden;
+    cursor: pointer; /* Change cursor to pointer on hover */
+
+    @include for-esm {
+        width: 90%; /* Full width on medium screens */
+    }
+
+    @include for-esm-2 {
+        width: 80%; /* Full width on medium screens */
+    }
+
+    @include for-sm {
+        width: 65%; /* Full width on medium screens */
+    }
+
+    @include for-md {
+        width: calc(100% / 2.2); /* Full width on medium screens */
+    }
+
+    @include for-lg {
+        width: calc(100% / 2.4); /* Full width on medium screens */
+    }
+
+    @include for-xl {
+        width: calc(100% / 2.3); /* Full width on medium screens */
+    }
+
+    @include for-2xl {
+        width: calc(100% / 4.4); /* Full width on medium screens */
+    }
+    
+    &:hover {
+        background-color: rgb(233, 233, 233); /* Change background color on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+        transform: translateY(-5px); /* Lift the listing slightly on hover */
+    }
+    
+    img {
+        max-width: 100%; /* Ensure images don't overflow */
+        height: auto;
+        aspect-ratio: 1/0.75; /* Maintain a 1:0.75 aspect ratio for images */
+        object-fit: cover;  
+    }
+
+    .car-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 35px 35px 25px;
+        margin-top: -8px;
+    }
+
+    .car-make-model {
+        letter-spacing: 1.7px;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 4px;
+
+        @include for-esm {
+            font-size: 15px;
+        }
+
+        @include for-esm-2 {
+            font-size: 20px;
+        }
+
+        @include for-md {
+            font-size: 18px;
+            letter-spacing: 1.45px;
+        }
+
+        @include for-md-2 {
+            font-size: 20px;
+            letter-spacing: 1.7px;
+        }
+
+        @include for-lg {
+            letter-spacing: 2px;
+        }
+
+        @include for-xl {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        @include for-2xl {
+            font-size: 19px;
+            letter-spacing: 1.9px;
+        }
+    }
+
+    .car-year {
+        font-size: 16px;
+        margin-top: -7px;
+        margin-bottom: 10px;
+
+        @include for-esm {
+            font-size: 14px;
+        }
+
+        @include for-esm-2 {
+            font-size: 16px;
+        }
+
+        @include for-xl {
+            font-size: 20px;
+        }
+
+        @include for-2xl {
+            font-size: 16px;
+        }
+    }
+
+    .prices {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .car-buy {
+            margin-top: -8px;
+        }
+
+        @include for-esm {
+            font-size: 14px;
+        }
+
+        @include for-esm-2 {
+            font-size: 16px;
+        }
+
+        @include for-xl {
+            font-size: 20px;
+        }
+
+        @include for-2xl {
+            font-size: 16px;
+        }
+    }
+
+    .timer {
+        font-size: 16px;
+        box-sizing: border-box;
+        padding: 0px 10px;
+        border: 1px solid black;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4px 0;
+
+        @include for-esm {
+            font-size: 14px;
+        }
+
+        @include for-esm-2 {
+            font-size: 16px;
+            padding: 0px 13px;
+            border-radius: 15px;
+        }
+
+        @include for-xl {
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 0px 20px;
+        }
+
+        @include for-2xl {
+            font-size: 16px;
+            border-radius: 15px;
+            padding: 0px 13px;
+        }
+    }
+
+    .prices-timer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.no-listings {
+    margin-top: 80px;
+    height: 48vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        width: 400px;
+        text-align: center;
+    }
+}

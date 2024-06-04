@@ -1,0 +1,134 @@
+@import 'variables';
+
+.create-form {
+    margin-top: 65px;
+    padding-top: 30px;      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-form-parts-container {
+    display: flex;
+    @include for-esm {
+        flex-direction: column;
+        gap: 7px;
+    }
+    @include for-md{
+        flex-direction: row;
+        gap: 70px;
+    }
+    @include for-lg {
+        flex-direction: row;
+        gap: 230px;
+    }
+    justify-content: center;
+    align-items: center; 
+}
+
+.create-form-part1, .create-form-part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+
+    input {
+        @include for-esm {
+            width: 340px;
+        }
+        @include for-sm {
+            width: 400px;
+        }
+        @include for-md {
+            width: 340px;
+        }
+        @include for-lg {
+            width: 370px;
+        }
+        border: none;
+        background-color: rgb(243,244,246);
+        border-radius: 7px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    select {
+        border-radius: 7px;
+    }
+}
+
+.create-button {
+    box-sizing: border-box;
+    padding: 10px 136px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(169, 236, 199) !important;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(122, 224, 168) !important;
+    }
+
+    @include for-esm {  
+        margin: 25px 0px 0px;
+    }
+
+    @include for-sm {
+        margin: 30px 0px 0px;
+    }
+}
+
+.label-select-group
+{
+    display: flex;
+    align-items: center;
+    label {
+        flex: 0 0 auto; 
+        margin-right: 5px;
+    }
+    
+    select {
+        flex: 1;
+    }
+}
+
+// Style for the custom file input container
+.main-image,
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #caf3f8;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #b9e3fd; // Change background color on hover
+    }
+
+    input[type="file"] {
+        display: none; // Hide the default file input
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .selected-files {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+.main-image {
+    background-color: rgb(255, 218, 148);
+    
+    &:hover {
+        background-color: rgb(255, 207, 117); // Change background color on hover
+    }
+}

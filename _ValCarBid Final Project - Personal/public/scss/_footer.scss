@@ -1,0 +1,250 @@
+.about-us {
+    background-color: rgb(249, 249, 249);
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(232, 231, 231);
+
+    @include for-esm-2 {
+        padding: 20px 40px 0px;
+    }
+
+    @include for-md {
+        padding: 20px 80px 0;
+        justify-content: space-between;
+    }
+}
+
+.valcarbid-info {
+    .agency-title {
+        font-size: 18px;
+        color: black;
+    }
+
+    p {
+        margin-bottom: 7px;
+        color: black;
+    }
+
+    @include for-esm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        p {
+            text-align: center;
+        }
+        padding-bottom: 15px;
+    }
+
+    @include for-md-2 {
+        width: 230px;
+        align-items: flex-start;
+        p {
+            text-align: left;
+        }
+    }
+}
+
+.keep-in-touch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+    h3 {
+        display: flex;
+        justify-content: center;
+        font-weight: normal;
+        margin-bottom: 15px;    
+        padding-right: 5px;
+    }
+
+    a {
+        padding-left: 7px;
+        color: black;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            color: #6fc754;
+        }
+    }
+
+    @include for-esm {
+        width: 100%;
+        padding-bottom: 22px;
+    }
+
+    @include for-esm-2 {
+        width: 200px;
+        margin-left: calc(5%);
+    }
+
+    @include for-sm {
+        margin-left: calc(10%);
+    }
+
+    @include for-md-2 {
+        margin-left: 0;
+    }
+}
+
+.featured-links {
+    display: flex;
+    flex-direction: column;
+    .list-links {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        @include for-esm {
+            width: 100%;
+            align-items: center;
+        }  
+        @include for-md-2 {
+            width: 100%;
+            align-items: flex-end;
+        }  
+    }
+
+    h3 {
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: #6fc754;
+        }
+    }
+    @include for-esm {
+        width: 100%;
+        align-items: center;    
+    }
+
+    @include for-esm-2 {
+        width: 215px;
+        margin-right: calc(5%);
+    }
+    
+    @include for-sm {
+        margin-right: calc(10%);
+    }
+
+    @include for-md-2 {
+        margin-right: 0;
+        align-items: flex-end;    
+    }
+}   
+
+
+
+// ANOTHER FOOTER
+.social-and-copyrights {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 80px;
+    background-color:  rgb(249, 249, 249);
+
+    @include for-esm {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @include for-esm-2 {
+        flex-direction: row;
+        gap: 0px;
+        justify-content: space-between;
+    }
+}
+
+.rights-reserved {
+    width: 105px;
+    p {
+        color: black;
+        font-size: 9px;
+    }
+
+    @include for-esm {
+        p {
+            width: 105px;
+            text-align: center;
+        }
+    }
+
+}
+
+.socials {
+    @include for-esm {
+    }
+
+    @include for-sm {
+    }
+
+    @include for-md {
+    }
+
+    @include for-lg {
+    }
+}
+
+.social-item {
+    padding: 7px 13px;
+    border-radius: 50px;
+}
+
+.twitter-bg {
+    border: 1px solid $twitter-color;
+    color: $twitter-color;
+
+    &:hover,
+    &:focus {
+        background-color: $twitter-color;
+        color: white;
+    }
+}
+
+.facebook-bg {
+    border: 1px solid $facebook-color;
+    color: $facebook-color;
+
+    &:hover,
+    &:focus {
+        background-color: $facebook-color;
+        color: white;
+    }
+}
+
+.pinterest-bg {
+    border: 1px solid $pinterest-color;
+    color: $pinterest-color;
+
+    &:hover,
+    &:focus {
+        background-color: $pinterest-color;
+        color: white;
+    }
+}
+
+.linkedin-bg {
+    border: 1px solid $linkedin-color;
+    color: $linkedin-color;
+
+    &:hover,
+    &:focus {
+        background-color: $linkedin-color;
+        color: white;
+    }
+}

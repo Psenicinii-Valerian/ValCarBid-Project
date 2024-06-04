@@ -1,0 +1,75 @@
+// Variables
+$twitter-color: #55acee;
+$facebook-color: #3b5998;
+$pinterest-color: #dd4b39;
+$linkedin-color: #007bb5;
+
+// Extra small screen
+@mixin for-esm {
+    @media screen and (min-width: 375px) {
+        @content;
+    }
+}
+
+// Extra small screen
+@mixin for-esm-0 {
+    @media screen and (min-width: 430px) {
+        @content;
+    }
+}
+
+// Extra small screen
+@mixin for-esm-1 {
+    @media screen and (min-width: 475px) {
+        @content;
+    }
+}
+
+// Smth between esm and sm
+@mixin for-esm-2 {
+    @media screen and (min-width:545px) {
+        @content;
+    }
+}
+
+// Small screen
+@mixin for-sm {
+    @media screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+// Medium screen
+@mixin for-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// Medium screen
+@mixin for-md-2 {
+    @media screen and (min-width: 825px) {
+        @content;
+    }
+}
+
+// Large screen
+@mixin for-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+// Extra large screen
+@mixin for-xl {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+// Extra extra large screen
+@mixin for-2xl {
+    @media screen and (min-width: 1536px) {
+        @content;
+    }
+}

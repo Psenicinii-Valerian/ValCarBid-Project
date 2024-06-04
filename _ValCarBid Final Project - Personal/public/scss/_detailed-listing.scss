@@ -1,0 +1,375 @@
+.detailed-info-form {
+    @include for-esm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @include for-xl {
+        display: block;
+    }
+}
+
+.car-detailed {
+    margin-top: 55px;
+    display: flex;
+    padding: 30px;
+
+    @include for-esm {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    @include for-sm {
+        margin-left: 0px;
+        width: 600px;
+    }
+
+    @include for-md {
+        width: 750px;
+    }
+
+    @include for-lg {
+        width: 850px;
+    }
+
+    @include for-esm {
+        flex-direction: column;
+    }
+
+    @include for-xl {
+        flex-direction: row;
+    }
+}
+
+.car-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include for-esm {
+        margin: 0px;
+    }
+    @include for-xl {
+        margin-right: 50px;
+    }
+    padding-top: 10px;
+    align-items: flex-start;
+
+    img {
+        @include for-md {
+            width: 730px;
+        }
+
+        @include for-lg {
+            width: 800px;
+        }
+
+        @include for-xl {
+            min-width: 590px;
+            min-height: 400px;
+        }
+
+        @include for-2xl {
+            min-height: 0px;
+            min-width: 553px;
+            height: auto;
+        }
+
+        height: auto;
+        align-self: flex-start;
+    }
+
+    .arrow-btns {
+        position: absolute;
+        color: white;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        padding: 0px 3px;
+
+        .left-arrow,
+        .right-arrow {
+            @include for-xl {
+                margin-right: 0px;
+                margin-bottom: 53px;
+            }
+            @include for-2xl {
+                margin-bottom: 0px;
+            }
+            display: flex;
+            align-items: center; /* Vertically center content within the divs */
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .left-arrow {
+            padding-right: 20px;
+        }
+        
+        .right-arrow {
+            padding-left: 20px;
+        }
+    }
+
+    @include for-lg {
+        margin-bottom: 10px;
+    }
+
+    @include for-xl {
+        margin-bottom: 20px;
+    }
+}
+
+.car-detailed-info-sections {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    h3 {
+        @include for-esm {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        @include for-sm {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    @include for-esm {
+        width: 90%;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    @include for-sm {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    @include for-md {
+        width: 70%;
+        max-width: 1024px;
+        align-items: flex-start;
+    }
+
+    @include for-xl {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    @include for-esm {
+        p {
+            font-size: 13px;
+        }
+    }
+    
+    @include for-sm {
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+.car-main-info {
+    h2 {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: -10px;
+    }
+    margin-bottom: 20px;
+
+
+    @include for-lg {
+        width: 850px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    @include for-xl {
+        margin-bottom: 15px;
+        width: auto;
+        display: block;
+    }
+
+}
+
+.car-secondary-info-esm,
+.car-secondary-info-2xl,
+.car-secondary-info-xl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@include for-esm {
+    .car-secondary-info-esm {
+        display: flex;
+    }
+
+    .car-secondary-info-xl {
+        display: none;
+    }
+
+    .car-secondary-info-2xl {
+        display: none;
+    }
+}
+
+@include for-md {
+    .car-secondary-info-esm {
+        display: none;
+    }
+
+    .car-secondary-info-xl {
+        display: flex;
+    }
+
+    .car-secondary-info-2xl {
+        display: none;
+    }
+}
+
+@include for-2xl {
+    .car-secondary-info-esm {
+        display: none;
+    }
+
+    .car-secondary-info-xl {
+        display: none;
+    }
+
+    .car-secondary-info-2xl {
+        display: flex;
+    }
+}
+
+.car-detailed-info-section {
+    display: flex;
+    flex-direction: row;
+
+    @include for-esm {
+        gap: 50px;
+    }
+
+    @include for-esm-0 {
+        gap: 100px;
+    }
+
+    @include for-esm-1 {
+        gap: 150px;
+    }
+
+    @include for-esm-2 {
+        gap: 215px;
+    }
+        
+    @include for-sm {
+        gap: 115px;
+    }
+    
+    @include for-md {
+        gap: 50px;
+    }
+    
+    @include for-lg {
+        justify-content: flex-start;
+        gap: 105px;
+    }
+
+    @include for-xl {
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+.car-detailed-info {
+    @include for-esm {
+        width: 135px;
+    }
+    @include for-sm {
+        width: 210px;
+    }
+    display: flex;
+    flex-direction: column;
+}
+
+.bid-buy-btns,
+.listing-owner {
+    @include for-esm {
+        width: 113%;
+    }
+    @include for-esm-1 {
+        width: 112%;
+    }
+    @include for-esm-2 {
+        width: 112%;
+    }
+    @include for-sm {
+        width: 540px;
+    }
+    @include for-md {
+        width: 690px;
+        padding-right: 0px;
+    }
+    @include for-lg {
+        width: 850px;
+        padding-right: 70px;
+    }
+    @include for-xl {
+        width: 569px;
+        padding-right: 0px;
+    }
+    @include for-2xl {
+        width: 840px;
+    }
+    margin-top: 20px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    .bid-btns {
+        input {
+            width: 135px;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+    }
+
+    .bid-btn,
+    .buy-btn {
+        letter-spacing: 2px;
+        background-color: black;
+        color: white;
+        width: 70px;
+        height: 41.6px;
+    }
+}
+
+.listing-owner {
+    justify-content: center;
+    color: rgb(255, 65, 65);
+}
+
+.crash-description-paragraph {
+    line-height: 1.2;
+}
+
+.bid-price-info {
+    display: flex;
+}
+
+.circle-info-link {
+    vertical-align: middle; /* Adjust this value to move it up or down as needed */
+    display: inline-block; /* This ensures it takes up space and allows vertical alignment */
+    margin-top: -5px;
+    margin-left: -2px;
+    color: rgb(127, 127, 255);
+}

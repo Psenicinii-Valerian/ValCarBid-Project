@@ -1,0 +1,113 @@
+.bid-success-msg {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(30deg, #2980B9, #6DD5FA);
+    transition-duration: 0.3s;
+    padding: 20px 10px;
+    width: 350px;
+    height: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    /* centering the success message */
+    transform: translateX(-50%);
+    left: 50%;
+    top: 11px;
+
+    @include for-esm {
+        font-size: 14px;
+        letter-spacing: 0px;
+        width: 250px;
+        left: 55%;
+    }
+
+    @include for-esm-2 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        width: 250px;
+        left: 53%;
+    }
+
+    @include for-sm {
+        left: 57%;
+    }
+
+    @include for-md {
+        letter-spacing: 1px;
+        width: 300px;
+        left: 56%;
+    }
+
+    @include for-lg {
+        font-size: 16px;
+        letter-spacing: 2px;
+        width: 350px;
+        left: 53%;
+    }
+
+    @include for-xl {
+        font-size: 16px;
+        letter-spacing: 2px;
+        width: 350px;
+        left: 52.3%;
+    }
+}
+
+.index-success-msg {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(30deg, #2980B9, #6DD5FA);
+    transition-duration: 0.3s;
+    padding: 20px 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    /* centering the success message */
+    transform: translateX(-50%);
+    left: 50%;
+    top: 11px;
+
+    @include for-esm {
+        font-size: 14px;
+        letter-spacing: 0px;
+        width: 250px;
+        left: 52.5%;
+    }
+
+    @include for-esm-2 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        width: 250px;
+        left: 50%;
+    }
+
+    @include for-sm {
+        left: 55%;
+    }
+
+    @include for-md {
+        letter-spacing: 1px;
+        width: 300px;
+        left: 50%;
+    }
+
+    @include for-lg {
+        font-size: 16px;
+        letter-spacing: 2px;
+        width: 350px;
+    }
+}

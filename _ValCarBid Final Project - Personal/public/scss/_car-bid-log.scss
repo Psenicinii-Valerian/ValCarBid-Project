@@ -1,0 +1,33 @@
+.car-bid-log {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 65px;
+    padding: 50px;
+    min-height: 50vh;
+}
+
+.one-car-bid-log {
+    p {
+        display: inline;
+    }
+    white-space: no-wrap;
+}
+
+.bid-price {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 0 5px;
+    margin-right: 3px;
+}
+
+.car-bidder {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.car-model {
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+}
